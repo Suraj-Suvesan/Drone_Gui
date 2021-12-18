@@ -19,12 +19,10 @@ def stats():
 dpg.create_context()
 
 with dpg.window(label="Basic Movement", pos=(100, 0), autosize=True):
-    # user data set when button is created
     dpg.add_button(label="forward", callback=lambda: drone.forward(20))
     dpg.add_button(label="backward", callback=lambda: drone.back(20))
     dpg.add_button(label="left", callback=lambda: drone.left(20))
     dpg.add_button(label="right", callback=lambda: drone.right(20))
-    # user data and callback set any time after button has been created
 
 with dpg.window(label="Complex Movement", pos=(300, 0), autosize=True):
     dpg.add_button(label="Rotate 90 Degrees (cw)", callback=lambda: drone.cw(90))
